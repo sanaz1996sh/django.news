@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خبرهای موسیقی </title>
+    <link rel="stylesheet" href="{%static 'news_app/news.css'%}">
+</head>
+<body  id="news"  dir="rtl">
+   
+    <table id="table1">
+        <tr>
+            <td><h1 class="news-title">  سایت خبرهای موسیقی <img  src="{% static 'news_app/music.jpeg' %}"  width="800px" height="300px" ></h1></td>
+        </tr>
+    </table>
+    {% for m in music%}
+    <table  id="table2"   dir="rtl">
+        <tr class="news-onvan">
+            <td>{{m.number}}-{{m.title}}</td>
+        </tr>
+        <tr class="news-onvan2">
+            <td>{{m.text}}</td>
+        </tr>
+    </table>
+    {%endfor%}
+    <table id="table3">
+         <tr >
+             <td id="footer">اطلاعات این سایت از سایت قطره کپی شده است</td>
+        </tr>
+    </table>
+            
+    
+   
+</body>
+</html>
